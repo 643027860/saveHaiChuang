@@ -1,0 +1,60 @@
+/* 专门对 element-UI 默认样式修改的 less 文件 */
+
+// 修改 element 的下拉选择框样式
+.el-dropdown-menu{
+  padding: 8px 0 5px!important;
+  .el-dropdown-menu__item{
+    line-height: 30px;
+    padding: 0 15px;
+  }
+}
+
+// 输入框样式
+.el-input,.el-input__inner{
+  max-width: 700px!important;
+}
+.el-textarea,.el-textarea__inner{
+  max-width: 700px!important;
+}
+
+// 弹窗样式
+.el-dialog {
+  .el-dialog__header{
+    border-bottom: 1px solid rgb(233,233,233)!important;
+  }
+  .el-dialog__body{
+    padding: 20px 20px 10px!important;
+  }
+}
+
+// 适配移动端
+@media screen and (max-width: 768px) {
+  // 消息提示样式
+  .el-message {
+    min-width: 300px!important;
+  }
+  // 确认框样式
+  .el-message-box{
+    width: 300px !important;
+  }
+  // 输入框样式
+  .el-input,.el-input__inner{
+    max-width: 200px!important;
+  }
+  .el-textarea,.el-textarea__inner{
+    max-width: 200px!important;
+  }
+  //// 弹窗样式
+  //.el-dialog__wrapper .el-dialog {
+  //  width: 300px !important;
+  //  .el-dialog__body{
+  //    padding: 10px 20px!important;
+  //    .el-form-item__label{
+  //      width: 68px!important;
+  //    }
+  //    .el-select,.el-input{
+  //      width: 180px!important;
+  //    }
+  //  }
+  //}
+}

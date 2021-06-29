@@ -1,0 +1,68 @@
+/* 系统a便签基本样式：访问前后颜色不变 */
+.my-link{
+  color: #36a2f5;
+  text-decoration: none;
+  &:hover{
+    color: #36a2f5;
+    text-decoration: underline;
+  }
+  &:visited{
+    color: #36a2f5;
+  }
+}
+/* 超出1行显示省略号 */
+.over-pointr{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+/* 超出2行显示省略号 */
+.over-pointr2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+/* 不能选中 */
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* 清除浮动 */
+.float-clear{
+  &:before,&:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+/* 左浮动 */
+.float-left{
+  float: left;
+}
+/* 右浮动 */
+.float-right{
+  float: right;
+}
+.mobile-block,.mobile-inline{
+  display: none!important;
+}
+// 移动端样式
+@media screen and (max-width: 768px) {
+  .pc{
+    display: none!important;
+  }
+  .mobile-block{
+    display: block!important;
+  }
+  .mobile-inline{
+    display: inline-block!important;
+  }
+}
+
+
+

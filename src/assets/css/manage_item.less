@@ -1,0 +1,71 @@
+/*
+* 管理端基本模块样式
+*/
+@import "./mutations";
+
+.manage-item{
+  // 每个模块的头部基本样式
+  .manage-item-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: @padding-big;
+    background: @bg-color;
+    // 筛选条件表单样式
+    .el-form{
+      .el-form-item{
+        margin-bottom: 0px;
+      }
+    }
+  }
+  // 每个模块的功能 item 基本样式
+  .manage-item-component{
+    margin-top: @margin-medium;
+    background: @bg-color;
+    // 每个 item 的 title
+    .manage-item-component-title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: @padding-small @padding-medium;
+      font-size: 18px;
+      border-bottom: 1px solid @font-color-title-menu;
+    }
+    // 每个 item 的 content
+    .manage-item-component-content{
+      padding: @padding-medium calc(2 * @padding-medium);
+      line-height: 22px;
+
+      // 按钮组样式
+      // 按钮样式
+      .manage-item-option-button{
+        text-align: center;
+        button{
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .manage-item{
+    // 每个模块的头部基本样式
+    .manage-item-header{
+      padding: @padding-medium;
+    }
+    // 每个模块的功能 item 基本样式
+    .manage-item-component{
+      // 每个 item 的 title
+      .manage-item-component-title{
+        font-size: 16px;
+      }
+      // 每个 item 的 content
+      .manage-item-component-content{
+        padding: @padding-medium;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
